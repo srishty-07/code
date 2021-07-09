@@ -45,7 +45,7 @@ int main()
 
 
 
-// subaaray with given sum
+// subaaray with given sum when array is sorted
 /*MY APPROACH optimise it using 2 pointer
 
 #include <iostream>
@@ -68,12 +68,108 @@ int main()
         for(int j=i;j<n;j++){
             curr+=a[j];
             if(curr==s){
-                cout<<i+1<<" "<<j<<endl;
+                cout<<i+1<<" "<<j+1<<endl;
+                return 0;
             }
             
         }
     }
-
+    cout<<"-1"<<endl;
     return 0;
 }
 ******************/
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    int N = 1e6+2;
+    bool checkArray[N];
+    for(int i=0;i<N;i++){
+        checkArray[i] = 0;
+    }
+    for(int i=0;i<n;i++){
+        if(a[i]>=0){
+            checkArray[a[i]]=1;
+        }
+    }
+    int ans=0;
+    for(int i=0;i<N;i++){
+    if(checkArray[i]==false){
+        ans=i;
+        break;
+    }
+    }
+    cout<<ans<<endl;
+    return 0;
+}
+// iske andar ans ko declare it as -1 aur fir check array ka for loop 
+// chalayo check vala from 1 to N
+
+
+
+
+
+// print all subarrays
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            for(int k=i;k<=j;k++){
+                cout<<a[k]<<" ";
+            }cout<<endl;
+        }
+    }
+    return 0;
+}
+
+// maximum subbarray sum brute force
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    int sum=0;
+    int maxsum=INT_MIN;
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            sum=0;
+            for(int k=i;k<=j;k++){
+               sum+=a[k];
+            }
+            maxsum=max(maxsum,sum);
+        }
+    }
+    cout<<maxsum<<endl;
+    return 0;
+}
