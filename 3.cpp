@@ -47,6 +47,7 @@ int main()
 
 // maximum circular array sum
 /******************************************************************************
+for explanation
  https://www.youtube.com/watch?v=0JYgnhnZFcE&list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&index=27
 *******************************************************************************/
 
