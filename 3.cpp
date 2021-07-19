@@ -44,7 +44,6 @@ int main()
 // printf("%d\n", max_so_far);
 
 
-
 // maximum circular array sum
 /******************************************************************************
 for explanation
