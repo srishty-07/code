@@ -34,43 +34,43 @@ int main()
     // it will be another grp and if not it is set and then will be sent to another grp 
     // after segregation of grp xor will be done of both grp now only one elemnt out of each grp will be there 
     // hence printing two unique element
-// #include <iostream>
-// #include<bits/stdc++.h>
-// using namespace std;
-// void findUni(int a[],int n){
-//     int xorsum=0;
-//     for(int i=0;i<n;i++){
-//         xorsum=xorsum^a[i];
-//     }
-//     // now we want to get the rightmost set bit
-// this can only be done in java so see about how we can implement to find rightmost bit in c++
-//     int rightBit = xorsum & -xorsum;
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+void findUni(int a[],int n){
+    int xorsum=0;
+    for(int i=0;i<n;i++){
+        xorsum=xorsum^a[i];
+    }
+    // now we want to get the rightmost set bit
+    // this can only be done in java so see about how we can implement to find rightmost bit in c++
+    // use brackets it is very necessary it may lead to error    
+    int rightBit = xorsum & (-xorsum);
     
-//     int x=0;
-//     int y=0;
+    int x=0;
+    int y=0;
     
-//     for(int i=0;i<n;i++){
-//         if(a[i] & rightBit == 0){
-//             x=x^a[i];
-//         }
-//         else{
-//             y=y^a[i];
-//         }
-//     }
+    for(int i=0;i<n;i++){
+        if((a[i] & rightBit) == 0){
+            x=x^a[i];
+        }
+        else{
+            y=y^a[i];
+        }
+    }
     
-//     cout<<x<<" "<<y;
-// }
-// int main()
-// {
-//     int n;
-//     cin>>n;
-//     int a[n];
-//     for(int i=0;i<n;i++){
-//         cin>>a[i];
-//     }
+    cout<<x<<" "<<y;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
     
-//     findUni(a,n);
+    findUni(a,n);
     
-//     return 0;
-// }
-
+    return 0;
+}
