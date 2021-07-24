@@ -103,3 +103,54 @@ int main()
 //     getxor(a,n);
 //     return 0;
 // }
+
+
+
+// 3 find unique no 
+// find unique no where every number except one is present thrice
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int GetBit(int n,int pos){
+    return ((n & (1<<pos))!=0);
+}
+int SetBit(int n,int pos){
+    return (n | (1<<pos));
+}
+int findNo(int a[],int n){
+    
+    int result=0;
+    // initiall loop will run till 64 i.e 64 bits and in that we will check whose
+    // by extracting set bit at pos j in inner loop
+    for(int i=0;i<64;i++){
+        int sum=0;
+        for(int j=0;j<n;j++){
+            if(GetBit(a[j],i)){
+                // agar setbit hai matlab jaise hi one mil jata hai 
+                // vaise hi sum ko bada do aur fir baad main jinka %3 hoga matlab voh 3 time present hai 
+                // aur jinak nahi unka remainder ayega 
+                // fir jo bhi inka % karkre ayega unka reverse karenge to humara uniwque no aa jayega
+                sum++;
+            }
+        }
+        if( sum % 3 != 0){
+            // jo mod 3 remainder nahi dega matlab vahi unique no hai
+            //  unko hum setbit kardenge result ke andar
+            result = SetBit(result,i);
+        }
+    }
+    return result;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    cout<<findNo(a,n)<<endl;
+    return 0;
+}
