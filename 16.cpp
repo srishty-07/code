@@ -22,7 +22,7 @@ int main()
     return 0;
 }
 
-
+// 
 // find GCD or highest prime facter (hcf) using euclid i.e using incluson exclusion principle
 #include <iostream>
 #include<bits/stdc++.h>
