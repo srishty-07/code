@@ -15,3 +15,26 @@ return;
 }
 inc(n - 1);
 cout << n << endl;
+
+  
+  // sum of n natural no using recursion
+
+#include <iostream>
+
+using namespace std;
+int power(int n,int p){
+    if(p==0){
+        return 1;
+    }
+    int prevPower = n * power(n,p-1);
+    // kyunki power till n will be n*(n^p-1)
+    return prevPower;
+}
+int main()
+{
+    int n,p;
+    cin>>n>>p;
+    cout<<power(n,p);
+
+    return 0;
+}
