@@ -38,3 +38,27 @@ int main()
 
     return 0;
 }
+  
+  
+  // sum of n natural no using recursion
+
+#include <iostream>
+
+using namespace std;
+int fact(int n){
+    if(n==1){
+        return 1;
+    }
+    int Prevfact = n * fact(n-1);
+    
+    return Prevfact;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<fact(n);
+
+    return 0;
+}
+
