@@ -95,3 +95,38 @@ int main()
     cout<<ans<<endl;
     return 0;
 }
+
+
+
+
+// maximum subarray using kadanes algo
+// it will not work for when array will have all -ve integres 
+// eg 8
+// -2 -3 4 -1 -2 1 5 -3
+// output=7
+// maximum sum nikalna hai subarray ka we can do it using kadanes algo
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    int currSum=0;
+    int maxsum=INT_MIN;
+    for(int i=0;i<n;i++){
+        currSum=currSum+a[i];
+        if(currSum<0){
+            currSum=0;
+        }
+        maxsum=max(maxsum,currSum);
+    }
+    cout<<maxsum<<endl;
+    return 0;
+}
