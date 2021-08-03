@@ -120,9 +120,11 @@ int main()
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
+ 
     int key;
     cin>>key;
     cout<<firstOcc(a,n,0,key)<<endl;
     cout<<LastOcc(a,n,0,key);
     return 0;
+ 
 }
