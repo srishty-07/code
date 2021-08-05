@@ -75,3 +75,39 @@ int main()
 // input - pisrishpipisrishpipi
 // output - 3.14srish3.143.14srish3.143.14
 // https://drive.google.com/file/d/1UN0moEVSoWC-kNYucMnHnVurd1GEF0m8/view
+
+
+/******************************************************************************
+move all elements at last of the string
+*******************************************************************************/
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+string moveAllx(string s,int n){
+    if(n==0){
+        return "";
+    }
+    char ch=s[0];
+    string ros=moveAllx(s.substr(1),n-1);
+    if(ch=='x'){
+        return (ros+ch);
+        // matlab agar humara jo pehle alphabet aa raha hai string ka agar voh x hai to 
+        // hum return kar rahe hai ros(rest of string)+x matlab ab x at the end of the string 
+        // x add ho jayenge
+    }
+    else{
+        // aur agar nahi ata x to directly ros return kardenge with ch
+        return (ch+ros);
+        // matlab voh character vahi rahega last main nahi 
+    }
+}
+int main()
+{
+    string s;
+    getline(cin,s);
+    int n=s.length();
+    cout<<moveAllx(s,n);
+    return 0;
+}
+
