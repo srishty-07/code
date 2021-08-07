@@ -90,3 +90,39 @@ int main()
     cout<<endl;
     return 0;
 }
+
+
+/******************************************************************************
+print all possible word from phone digits 
+*******************************************************************************/
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+string keypadArray[] = { "","./","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz" };
+void keypad(string s,string ans){
+    if(s.length() == 0){
+        cout<<ans<<endl;
+        return;
+    }
+    // extracting the first charcater from the string to get the rqd elemnt sfrom the array
+    char ch = s[0];
+    // sending that character from no string to get the rqd element 
+    string code = keypadArray[ch - '0']; //-'0' is done tpo convert the character into int
+    // now we will extract the rest of the string
+    string ros = s.substr(1);
+    
+    // a loop for iterating all the lements till that code
+    for(int i=0;i<code.length();i++){
+        keypad(ros , ans+code[i]);
+    }
+}
+int main()
+{
+    string s;
+    getline(cin,s);
+    keypad(s,"");
+    cout<<endl;
+
+    return 0;
+}
