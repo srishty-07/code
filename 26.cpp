@@ -3,6 +3,8 @@
 // subsequence of a string
 // input-'abc'
 // output-' "" C B BC A AC AB ABC '
+
+
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
