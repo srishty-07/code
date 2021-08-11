@@ -15,6 +15,7 @@ int countpath(int s,int e,int n){
     int count=0;
     for(int i=1;i<n;i++){
         count+=countpath(s+i,e,n);
+        
     }
     return count;
 }
