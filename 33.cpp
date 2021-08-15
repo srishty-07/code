@@ -25,9 +25,9 @@ int countXor(int a[],int n,int m,int k){
           int value = a[i]^a[i+1];
           
           temp.push_back(value);
-            //hum ab jo xor karke ayega usko ek ek karke new array main push karte jayenge aur fir next iteration pe 
-           //hum a[i] ki jo ab updated value hai usko hum a[i] ko assign kardenge ab jo value vala array tha voh new 
-          //value ka xor karega aur yeh chalta rehega jab tak humari upar vali base condn satisfy na ho jaye
+          // hum ab jo xor karke ayega usko ek ek karke new array main push karte jayenge aur fir next iteration pe 
+          // hum a[i] ki jo ab updated value hai usko hum a[i] ko assign kardenge ab jo value vala array tha voh new 
+          // value ka xor karega aur yeh chalta rehega jab tak humari upar vali base condn satisfy na ho jaye
           
           a[i]=temp[i];
         }
