@@ -1,4 +1,5 @@
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int divisible(int n, int a, int b){
 int c1=n/a;
