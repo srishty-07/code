@@ -1,7 +1,9 @@
 // sum of all subarrays
+
 // 1 2 2
 // 1 12 122 2 22 2
 // output- 1 3 5 3 4 2
+
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
