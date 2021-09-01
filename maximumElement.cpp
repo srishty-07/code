@@ -20,7 +20,40 @@ int majorityElement(int a[],int n){
             count = 1;
         }
     }
+    return el;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    cout<<majorityElement(a,n);
+    return 0;
+}
+
+
+// another case of same problem is when we have to return -1 when majority element doesnot exist
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int majorityElement(int a[],int n){
+    int el =a[0];
     
+    int count = 0;
+    for(int i=0;i<n;i++){
+        if(el == a[i]){
+            count++;
+        }
+    }
+    
+    if(count> n/2){
+        return el;
+    }
+    return -1;
 }
 int main()
 {
