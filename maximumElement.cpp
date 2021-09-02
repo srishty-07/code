@@ -35,6 +35,7 @@ int main()
 }
 
 
+// c++
 // another case of same problem is when we have to return -1 when majority element doesnot exist
 
 #include <iostream>
