@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int size;
+    cin>>size;
+    int*times = new int[25]();
+    
+    int start_time=25;
+    int end_time=0;
+    int l,r;
+    for (int i=0;i<size;i++){
+        cin>>l>>r;
+        if(l<start_time){
+            start_time=l;
+        }
+        if(r>end_time){
+            end_time=r;
+        }
+        for(int j=l;j<r;j++){
+            times[j]=1;
+        }
+    }
+    
+    int free_time = 0;
+    for(int i=start_time;i<end_time;i++){
+        if(times[i]!=1){
+            free_time+=1;
+        }
+    }
+    cout<<free_time;
+    return 0;
+}
