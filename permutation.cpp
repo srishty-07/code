@@ -11,6 +11,8 @@ void permutationn(string s,string ans){
         permutationn(ros,ans+ch);
     }
 }
+
+
 int main()
 {
     string s;
