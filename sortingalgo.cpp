@@ -2,6 +2,7 @@
 mergesort
 *******************************************************************************/
 
+// print all possible permutation without duplicating elemst in an array
 #include <iostream>
 using namespace std;
 void merge(int res[],int l,int mid,int r){
@@ -16,9 +17,9 @@ void merge(int res[],int l,int mid,int r){
         a[i] = res[l+i];
     }
     for(int i=0;i<n2;i++){
-        a[i] = res[mid+1+i];
+        b[i] = res[mid+1+i];
     }
-    int i,j=0;
+    int i=0,j=0;
     int k = l;
     while(i<n1 && j<n2){
         if(a[i]<b[j]){
