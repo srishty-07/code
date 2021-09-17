@@ -59,7 +59,9 @@ int main()
     }
     mergesort(res,0,n-1);
     for(int i=0;i<n;i++){
+        
         cout<<res[i]<<" ";
-    }cout<<endl;
+    }
+    cout<<endl;
     return 0;
 }
