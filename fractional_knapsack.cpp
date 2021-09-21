@@ -6,6 +6,7 @@ typedef struct Item
     int itemId;
     int weight;
     int profit;
+	
     float pByw;
     float xi;
 } 
