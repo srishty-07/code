@@ -28,6 +28,7 @@ struct Pair getMinMax(int a[], int n){
             minmax.max=a[i];
         }
         else if(a[i]<minmax.min){
+		
             minmax.min=a[i];
         }
     }
