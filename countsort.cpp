@@ -44,13 +44,14 @@ int main()
     }
     
     struct Pair minmax = getMinMax(a, n);
-	int freq[minmax.max-minmax.min+1];
+	int freq[minmax.max-minmax.min+1] = {0};
 	
 	for(int i=0;i<n;i++){
+	    //hum array ko iterate karenge aur jo value ati hai suppose a[0]=9 to usme main se min ko minus karte hai aur us position pe of frequency array hum value/freq ko ++ kardete hai 
 	    int point = a[i] - minmax.min;
 	    freq[point]++;
 	}
-	for(int i=0;i<n;i++){
+	for(int i=0;i<(minmax.max-minmax.min+1);i++){
 	    cout<<freq[i]<<" ";
 	}
 	return 0;
