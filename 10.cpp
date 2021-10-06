@@ -1,5 +1,4 @@
 // https://www.youtube.com/watch?v=MiJdgxTWaFs&list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&index=33
-
 // find the particular bit at that position
 // GET BIT
 #include <iostream>
