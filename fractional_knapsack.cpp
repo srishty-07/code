@@ -100,7 +100,8 @@ int main()
     return 0;
 }
 
-OR {using inbuilt sort function}
+// OR
+// {using inbuilt sort function}
 #include <bits/stdc++.h>
 using namespace std;
 
